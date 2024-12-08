@@ -1,0 +1,56 @@
+---
+const { lang } = Astro.props;
+---
+
+<footer class='containeer'>
+  <div class='mt-[130px] max-md:mt-[100px] flex flex-col max-md:gap-60'>
+    <div
+      class='flex justify-between items-center flex-wrap gap-2 max-md:flex-col max-md:items-start'
+    >
+      <a href={lang === "en" ? `/` : "/ru"}>
+        <img
+          src="../assets/images/logo.svg"
+          alt='Logo'
+          class='w-[159px] h-[40px] max-md:w-[120px] max-md:h-[30px]'
+          width={159}
+          height={40}
+          loading={"lazy"}
+        />
+      </a>
+      <div class='flex gap-7 max-md:flex-col my-7'>
+        <a href='#' class='font-medium text-17 font-sfpro text-white'>
+          Support
+        </a>
+        <a href='#' class='font-medium text-17 font-sfpro text-white'>
+          Terms of use
+        </a>
+        <a href='#' class='font-medium text-17 font-sfpro text-white'>
+          Privacy and cookie policy
+        </a>
+      </div>
+      <div class='flex gap-9'>
+        <a href='#' class='hover:opacity-85 duration-300 overflow-hidden'>
+          <img src="../assets/images/telegram.svg" alt='' width={32} height={32} loading={"lazy"} />
+        </a>
+        <a href='#' class='hover:opacity-85 duration-300 overflow-hidden'>
+          <img src="../assets/images/instagram.svg" alt='' width={32} height={32} loading={"lazy"} />
+        </a>
+        <a href='#' class='hover:opacity-85 duration-300 overflow-hidden'>
+          <img src="../assets/images/instagram.svg" alt='' width={32} height={32} loading={"lazy"} />
+        </a>
+      </div>
+    </div>
+    <div class='flex justify-between mt-4 max-md:flex-col-reverse max-md:gap-4'>
+      <h5
+        class='text-17 text-custom_white opacity-50 font-sfpro font-medium max-md:text-xs'
+      >
+        2024 © Dedicated.agency 2023. All Rights Reserved
+      </h5>
+      <h5
+        class='text-17 text-custom_white opacity-50 font-sfpro font-medium max-md:text-15'
+      >
+        Product by dedicated.agency
+      </h5>
+    </div>
+  </div>
+</footer>

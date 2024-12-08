@@ -1,0 +1,26 @@
+---
+const { t } = Astro.props;
+---
+
+<section class='containeer h-[100vh]'>
+  <div class='h-full flex flex-col gap-10 items-center justify-center overflow-hidden'>
+    <h1
+      class='text-80 text-white font-sfpro font-bold leading-96 text-center max-md:text-4xl'
+    >
+      {t.Hero.title}
+    </h1>
+    <h4
+      class='text-xl font-medium leading-6 text-white text-center opacity-[.8]'
+    >
+      {t.Hero.subtitle}
+    </h4>
+    <a href="https://t.me/plan_jet_bot/PlanJet"
+      class='bg-custom_gray25 py-4 px-8 w-40 h-54 rounded-2xl border-1 border-custom_gray flex items-center justify-center shadow-custom-1 backdrop-blur-2xl duration-300 transition ease-in-out relative overflow-hidden'
+    >
+      <div class='btn'></div>
+      <p class='text-base font-semibold font-sfpro leading-5 text-white'>
+        {t.Hero.btn}
+      </p>
+    </a>
+  </div>
+</section>

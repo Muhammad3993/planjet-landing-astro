@@ -1,0 +1,79 @@
+---
+import ru from "../../public/locales/ru.json";
+import en from "../../public/locales/en.json";
+import Navbar from "../components/Navbar.astro";
+// import "../../public/index.css";
+import Hero from "../components/Hero.astro";
+import Intergration from "../components/Intergration.astro";
+import Create from "../components/Create.astro";
+import OpenSource from "../components/OpenSource.astro";
+import SelfHosted from "../components/SelfHosted.astro";
+import Manage from "../components/Manage.astro";
+import Footer from "../components/Footer.astro";
+import Scroll from "../components/Scroll.astro";
+
+const translations: any = { ru, en };
+
+export function getStaticPaths() {
+  return [{ params: { lang: "en" } }, { params: { lang: "ru" } }];
+}
+
+const { lang } = Astro.params;
+const t = translations[lang] || translations["en"];
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="../index.css">
+    <title>Home</title>
+  </head>
+  <body>
+    <main>
+      <Scroll />
+      <Navbar t={t} lang={lang} />
+      <Hero t={t} />
+      <Intergration t={t} />
+      <Create t={t} />
+      <OpenSource t={t} />
+      <SelfHosted t={t} />
+      <Manage t={t} />
+      <Footer lang={lang} />
+    </main>
+  </body>
+  <!-- <AOSClientOnly /> -->
+  <script>
+    const nav = document.querySelector(".navbar");
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScroll) {
+        nav?.classList.add("hidden_nav");
+      } else {
+        nav?.classList.remove("hidden_nav");
+      }
+      lastScroll = currentScroll;
+    });
+
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      let scroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      let height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      let scrolled = (scroll / height) * 100;
+      let progress = document.getElementById("progress");
+      if (progress) {
+        progress.style.width = scrolled + "%";
+      }
+    }
+  </script>
+</html>

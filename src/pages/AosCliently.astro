@@ -1,0 +1,16 @@
+<!-- ---
+import 'aos/dist/aos.css'; // AOS CSS faylini import qilish
+
+export const AOSClientOnly = () => {
+  if (typeof window !== "undefined") {
+    import("aos").then((AOS) => {
+      AOS.init({
+        duration: 600,
+        // easing: 'ease-in-out',
+        once: true,
+      });
+    });
+  }
+
+  return null;
+}; -->

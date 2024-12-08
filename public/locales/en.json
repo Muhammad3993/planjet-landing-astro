@@ -1,0 +1,38 @@
+{
+  "Navbar": {
+    "about_project": "About project"
+  },
+  "Hero": {
+    "title": "Open-Source project management in your Telegram chat",
+    "subtitle": "Implement a user-friendly tool for scheduling and task management",
+    "btn": "Try it"
+  },
+  "Integration": {
+    "title": "Integration with Telegram groups and supergroups",
+    "text": "Easy integration with Telegram groups and supergroups",
+    "text1": "Manage goals and notifications when task statuses change"
+  },
+  "Create": {
+    "title": "Create tasks in a way that suits you",
+    "text": "The ability to create tasks both through the interface of the mini-application and directly in chat with the bot",
+    "text1": "Convenient input format that allows you to quickly set the name, description and deadline of the task."
+  },
+  "Opensource": {
+    "text": "PlanJet is an open source project.",
+    "text1": "Available for modification and distribution"
+  },
+  "Selfhosted": {
+    "subtitle": "Data security and privacy",
+    "data_control": "Data control",
+    "data_subtitle": "High privacy of your data. Manage and store your data on your own servers",
+    "customizability": "Customizability",
+    "customizability_title": "Ability to modify code and functionality to meet your specific requirements",
+    "independence": "Independence",
+    "independence_title": "There is no risk of service disconnection."
+  },
+  "Manage": {
+    "title": "Manage tasks efficiently with PlanJet",
+    "subtitle": "Contact us to quickly implement the tool in your team",
+    "btn": "Contact"
+  }
+}

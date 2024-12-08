@@ -1,0 +1,53 @@
+---
+const { t, lang } = Astro.props;
+import { Image } from "astro:assets";
+// import img from "/images/logo.svg";
+---
+
+<nav class='navbar'>
+  <div class='containeer h-14 flex items-center justify-between'>
+    <a href={lang === "/en" ? `/` : "./ru"} class=''>
+      <img
+        src="../assets/images/logo.svg"
+        alt='Logo'
+        loading={"eager"}
+        class='w-[159px] h-[40px] max-md:w-[120px] max-md:h-[30px]'
+      />
+    </a>
+    <div class='flex gap-12 max-md:hidden'>
+      <a
+        href='#about-project'
+        class='text-18 font-medium font-sfpro leading-5 text-white'
+      >
+        {t.Navbar.about_project}
+      </a>
+      <a
+        href='#open-source'
+        class='text-18 font-medium font-sfpro leading-5 text-white'
+      >
+        Open-source
+      </a>
+      <a
+        href='#self-hosted'
+        class='text-18 font-medium font-sfpro leading-5 text-white'
+      >
+        Self-hosted
+      </a>
+    </div>
+    <div class='flex items-center justify-center gap-4'>
+      <a
+        href='ru'
+        class={`text-18 max-md:text-base font-medium font-sfpro leading-5 text-white cursor-pointer ${lang !== "ru" && "opacity-50"}`}
+      >
+        RU
+      </a>
+      <div class='w-[2px] h-5 bg-white text-white'></div>
+      <a
+        href='./en'
+        class={`text-18 max-md:text-base font-medium font-sfpro leading-5 text-white cursor-pointer ${lang !== "en" && "opacity-50"}`}
+      >
+        EN
+      </a>
+    </div>
+  </div>
+</nav>

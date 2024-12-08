@@ -1,0 +1,68 @@
+---
+const { t } = Astro.props;
+---
+
+<section class='container-manage overflow-hidden' data-aos='fade-up'>
+  <div
+    class='w-full h-[564px] bg-custom_gray mt-40 rounded-72 border-x-6 border-custom_gray12 backdrop-blur-125 flex flex-row-reverse items-center justify-between max-md:h-auto max-md:flex-col-reverse max-sm:rounded-35 max-md:pt-12 max-md:pb-0 max-xs:rounded-none max-md:border-x-3'
+  >
+    <div
+      class='h-max relative max-md:flex max-md:justify-end max-md:items-end max-md:w-full max-md:mt-10'
+    >
+      <img
+        src="../assets/images/manage.svg"
+        alt=''
+        class='w-[422px] h-[621px] max-sm:w-[295px] max-sm:h-[432px] relative top-[-35px] max-xs:hidden'
+        width={422}
+        height={621}
+        loading={"lazy"}
+      />
+      <img
+        src="../assets/images/managemedia.svg"
+        alt=''
+        class='w-[422px] h-[621px] max-sm:w-[230px] max-sm:h-[393px] top-[-35px] relative right-[-30px] hidden max-xs:flex'
+        width={422}
+        height={621}
+        loading={"lazy"}
+      />
+      <img
+        src="../assets/images/manage1.svg"
+        alt=''
+        width={358}
+        height={142}
+        loading={"lazy"}
+        class='absolute bottom-[11%] left-[-52%] max-md:left-[12%] max-md:bottom-[26%] max-sm:w-[213px] max-xs:left-[16px] z-10'
+      />
+      <img
+        src="../assets/images/manage2.svg"
+        alt=''
+        width={320}
+        height={124}
+        loading={"lazy"}
+        class='absolute bottom-[27%] left-[-35%] max-md:left-[25%] max-md:bottom-[35%] max-sm:w-[190px] max-xs:left-[60px] z-0'
+      />
+    </div>
+    <div
+      class='w-[66%] pl-20 flex flex-col gap-8 max-md:w-full max-md:py-8 max-md:px-6 max-md:gap-4 max-md:mt-[-40px] max-lg:gap-4'
+    >
+      <h2
+        class='text-56 font-semibold font-sfpro leading-67 text-white max-md:text-2xl max-md:leading-6 max-lg:text-4xl'
+      >
+        {t.Manage.title}
+      </h2>
+      <h4
+        class='font-normal text-white text-2xl font-sfpro max-md:text-15 max-md:leading-5 w-[55%] max-md:w-full'
+      >
+        {t.Manage.subtitle}
+      </h4>
+      <button
+        class='border-1 border-custom_gray bg-custom_gray25 w-[160px] h-[54px] rounded-2xl backdrop-blur-[50px] shadow-custom-3 flex items-center justify-center cursor-pointer mt-7 duration-300 transition overflow-hidden'
+      >
+        <div class='btn'></div>
+        <p class='text-white font-semibold text-base font-sfpro'>
+          {t.Manage.btn}
+        </p>
+      </button>
+    </div>
+  </div>
+</section>

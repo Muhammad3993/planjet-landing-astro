@@ -1,0 +1,50 @@
+---
+const { t } = Astro.props;
+---
+
+<section class='pt-[100px]' id='open-source' data-aos='fade-up'>
+  <div class='containeer'>
+    <div class='flex flex-col items-center py-[160px] max-md:py-[130px]'>
+      <h1
+        class='font-sfpro font-semibold text-56 leading-67 text-center text-white max-md:text-4xl'
+      >
+        Open-source
+      </h1>
+      <div class='mt-10 max-md:mt-6'>
+        <h4
+          class='text-white text-center font-normal text-2xl font-sfpro max-md:text-base'
+        >
+          {t.Opensource.text}
+        </h4>
+        <h4
+          class='text-white text-center font-normal text-2xl font-sfpro max-md:text-base'
+        >
+          {t.Opensource.text1}
+        </h4>
+      </div>
+      <button
+        class='bg-custom_gray25 py-4 px-8 w-40 h-54 rounded-2xl border-1 border-b-3 border-custom_gray mt-8 flex items-center justify-center shadow-custom-1 backdrop-blur-2xl select-none gap-1 max-md:h-50 max-md:w-max hover:bg-white duration-300 transition ease-in-out git-btn overflow-hidden'
+      >
+        <div class='btn'></div>
+
+        <p class='text-base font-semibold font-sfpro leading-5 text-white'>
+          Git Hub
+        </p>
+        <img
+          src="../assets/images/git.svg"
+          alt=''
+          width={26}
+          height={26}
+          class='relative top-[-1px] image-git'
+        />
+        <img
+          src="../assets/images/git1.svg"
+          alt=''
+          width={26}
+          height={26}
+          class='relative top-[-1px] image-git1'
+        />
+      </button>
+    </div>
+  </div>
+</section>
